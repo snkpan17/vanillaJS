@@ -1,3 +1,7 @@
+:root{
+    --success-color: green;
+    --error-color: red;
+}
 *{
     box-sizing: border-box;
 }
@@ -13,7 +17,58 @@ body{
     background-color: cornsilk;
     width:400px;
     padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 h2{
     display: block;
+    margin: 0 0 20px;
+    text-align: center;
+}
+#form{
+    padding: 10px 20px;
+}
+.form-control{
+    margin-bottom: 8px;
+    position: relative;
+}
+.form-control label{
+    display: block;
+    margin-bottom: 10px;
+}
+.form-control input{
+    display: block;
+    border: 2px solid grey;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+}
+.form-control input:focus{
+    outline: none;
+    border: whitesmoke;
+}
+.form-control.success input{
+    border-color: var(--success-color);
+}
+.form-control.error input{
+    border-color: var(--error-color);
+}
+.form-control small{    
+    color: red;
+    visibility: hidden;
+}
+.form-control.error small{
+    visibility: visible;
+}
+#form button{
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    background-color: goldenrod;
+    color: black;
+    padding: 10px;
 }
